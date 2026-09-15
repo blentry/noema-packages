@@ -1,0 +1,23 @@
+schema = "noema.project/0.3"
+root = "assembly"
+composition = "noema.compose.toml"
+[[registries]]
+name = "official"
+git = "https://github.com/blentry/noema-register.git"
+ref = "main"
+[[sources]]
+id = "org.noema.heat-boundary"
+release = "0.1.0"
+registry = "official"
+[[sources]]
+id = "org.noema.joule-heating"
+release = "0.1.0"
+registry = "official"
+[[sources]]
+id = "org.noema.joule-to-heat"
+release = "0.1.0"
+registry = "official"
+[[sources]]
+id = "org.noema.resistive-operating-point"
+release = "0.1.0"
+registry = "official"

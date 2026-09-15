@@ -1,0 +1,9 @@
+schema = "noema.view/0.1"
+name = "heat-boundary"
+definition = "HeatBoundary::Boundary"
+[[ports]]
+name = "heat"
+member = ["heat"]
+direction = "input"
+required = true
+unit = "SI::'J/s'"

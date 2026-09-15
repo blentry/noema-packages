@@ -1,0 +1,17 @@
+schema = "noema.package/0.2"
+id = "org.noema.joule-to-heat"
+release = "0.1.0"
+kind = "mapping"
+license = "Apache-2.0"
+license_file = "LICENSE"
+dependencies = [{ id = "org.noema.joule-heating", release = "0.1.0" }, { id = "org.noema.heat-boundary", release = "0.1.0" }]
+contracts = ["mapping.toml"]
+[standard]
+kerml = "1.0"
+sysml = "2.0"
+library = "pilot-2026-04"
+[model]
+files = ["model.sysml"]
+[exports]
+symbols = ["JouleToHeat"]
+views = []

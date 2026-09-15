@@ -1,0 +1,17 @@
+schema = "noema.package/0.2"
+id = "org.noema.resistive-operating-point"
+release = "0.1.0"
+kind = "library"
+license = "Apache-2.0"
+license_file = "LICENSE"
+dependencies = []
+contracts = ["view.toml"]
+[standard]
+kerml = "1.0"
+sysml = "2.0"
+library = "pilot-2026-04"
+[model]
+files = ["model.sysml"]
+[exports]
+symbols = ["ResistiveOperatingPoint::Point"]
+views = ["resistive-operating-point"]

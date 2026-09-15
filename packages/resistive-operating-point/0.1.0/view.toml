@@ -1,0 +1,13 @@
+schema = "noema.view/0.1"
+name = "resistive-operating-point"
+definition = "ResistiveOperatingPoint::Point"
+[[ports]]
+name = "current"
+member = ["current"]
+direction = "output"
+unit = "SI::A"
+[[ports]]
+name = "resistance"
+member = ["resistance"]
+direction = "output"
+unit = "SI::ohm"

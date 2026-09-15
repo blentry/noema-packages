@@ -1,0 +1,20 @@
+schema = "noema.view/0.1"
+name = "joule-heating"
+definition = "JouleHeating::ConstantResistance"
+[[ports]]
+name = "current"
+member = ["current"]
+direction = "input"
+required = true
+unit = "SI::A"
+[[ports]]
+name = "resistance"
+member = ["resistance"]
+direction = "input"
+required = true
+unit = "SI::ohm"
+[[ports]]
+name = "power"
+member = ["power"]
+direction = "output"
+unit = "SI::W"
