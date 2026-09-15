@@ -1,0 +1,35 @@
+schema = "noema.composition/0.2"
+name = "motor-thermal-control"
+packages = [
+    { id = "org.noema.motor", release = "0.2.0" },
+    { id = "org.noema.thermal", release = "0.2.0" },
+    { id = "org.noema.control", release = "0.2.0" },
+]
+mappings = [
+    { id = "org.noema.loss-to-heat", release = "0.2.0" },
+    { id = "org.noema.speed-to-control", release = "0.2.0" },
+]
+[[instances]]
+name = "motor"
+usage = "Assembly::motor"
+view = { package = "org.noema.motor", name = "motor" }
+[[instances]]
+name = "thermal"
+usage = "Assembly::thermal"
+view = { package = "org.noema.thermal", name = "thermal" }
+[[instances]]
+name = "controller"
+usage = "Assembly::controller"
+view = { package = "org.noema.control", name = "control" }
+[[bindings]]
+id = "heat"
+from = { instance = "motor", port = "loss" }
+to = { instance = "thermal", port = "heat" }
+mapping = { package = "org.noema.loss-to-heat", name = "loss-to-heat" }
+assumptions = ["loss-becomes-heat"]
+allow_losses = ["spatial-distribution"]
+[[bindings]]
+id = "speed"
+from = { instance = "motor", port = "speed" }
+to = { instance = "controller", port = "speed" }
+mapping = { package = "org.noema.speed-to-control", name = "speed-to-control" }

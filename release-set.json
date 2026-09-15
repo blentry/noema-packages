@@ -1,0 +1,38 @@
+{
+  "schema": "noema.release-set/0.1",
+  "packages": [
+    {
+      "id": "org.noema.motor",
+      "release": "0.2.0",
+      "path": "packages/motor/0.2.0"
+    },
+    {
+      "id": "org.noema.thermal",
+      "release": "0.2.0",
+      "path": "packages/thermal/0.2.0"
+    },
+    {
+      "id": "org.noema.control",
+      "release": "0.2.0",
+      "path": "packages/control/0.2.0"
+    },
+    {
+      "id": "org.noema.loss-to-heat",
+      "release": "0.2.0",
+      "path": "packages/loss-to-heat/0.2.0"
+    },
+    {
+      "id": "org.noema.speed-to-control",
+      "release": "0.2.0",
+      "path": "packages/speed-to-control/0.2.0"
+    },
+    {
+      "id": "org.noema.assembly",
+      "release": "0.2.0",
+      "path": "packages/assembly/0.2.0"
+    }
+  ],
+  "examples": [
+    "motor-thermal-control"
+  ]
+}
