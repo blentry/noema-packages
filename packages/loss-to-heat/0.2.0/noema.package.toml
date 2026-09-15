@@ -1,0 +1,20 @@
+schema = "noema.package/0.2"
+id = "org.noema.loss-to-heat"
+release = "0.2.0"
+kind = "mapping"
+license = "Apache-2.0"
+license_file = "LICENSE"
+contracts = ["mapping.toml"]
+dependencies = [{id = "org.noema.motor", release = "0.2.0"}, {id = "org.noema.thermal", release = "0.2.0"}]
+
+[standard]
+kerml = "1.0"
+sysml = "2.0"
+library = "pilot-2026-04"
+
+[model]
+files = ["model.sysml"]
+
+[exports]
+symbols = []
+views = []

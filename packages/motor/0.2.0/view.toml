@@ -1,0 +1,13 @@
+schema = "noema.view/0.1"
+name = "motor"
+definition = "Motor::Motor"
+[[ports]]
+name = "loss"
+member = ["loss"]
+direction = "output"
+unit = "SI::kW"
+[[ports]]
+name = "speed"
+member = ["speed"]
+direction = "output"
+unit = "SI::'rad⋅s⁻¹'"

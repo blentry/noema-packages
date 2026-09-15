@@ -1,0 +1,9 @@
+schema = "noema.view/0.1"
+name = "control"
+definition = "Control::Controller"
+[[ports]]
+name = "speed"
+member = ["speed"]
+direction = "input"
+required = true
+unit = "SI::'rad⋅s⁻¹'"

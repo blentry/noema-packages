@@ -1,0 +1,27 @@
+schema = "noema.project/0.3"
+root = "assembly"
+composition = "noema.compose.toml"
+[[registries]]
+name = "official"
+git = "https://github.com/blentry/noema-register.git"
+ref = "main"
+[[sources]]
+id = "org.noema.control"
+release = "0.2.0"
+registry = "official"
+[[sources]]
+id = "org.noema.loss-to-heat"
+release = "0.2.0"
+registry = "official"
+[[sources]]
+id = "org.noema.motor"
+release = "0.2.0"
+registry = "official"
+[[sources]]
+id = "org.noema.speed-to-control"
+release = "0.2.0"
+registry = "official"
+[[sources]]
+id = "org.noema.thermal"
+release = "0.2.0"
+registry = "official"

@@ -1,0 +1,16 @@
+schema = "noema.mapping/0.1"
+name = "loss-to-heat"
+from = { package = "org.noema.motor", view = "motor", port = "loss" }
+to = { package = "org.noema.thermal", view = "thermal", port = "heat" }
+conversion = { kind = "scale", factor = { numerator = 1000, denominator = 1 } }
+preserves = ["quantity-value", "cardinality"]
+[[preconditions]]
+op = "equal"
+parameter = "source.quantity_kind"
+value = "ISQMechanics::PowerValue"
+[[assumptions]]
+id = "loss-becomes-heat"
+description = "The selected boundary represents all motor power loss as heat entering the thermal plant."
+[[losses]]
+id = "spatial-distribution"
+description = "The lumped thermal input does not retain spatial distribution of motor losses."

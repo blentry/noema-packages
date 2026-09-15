@@ -1,0 +1,6 @@
+schema = "noema.mapping/0.1"
+name = "speed-to-control"
+from = { package = "org.noema.motor", view = "motor", port = "speed" }
+to = { package = "org.noema.control", view = "control", port = "speed" }
+conversion = { kind = "identity" }
+preserves = ["quantity-value", "cardinality"]

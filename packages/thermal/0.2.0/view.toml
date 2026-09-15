@@ -1,0 +1,9 @@
+schema = "noema.view/0.1"
+name = "thermal"
+definition = "Thermal::ThermalPlant"
+[[ports]]
+name = "heat"
+member = ["heat"]
+direction = "input"
+required = true
+unit = "SI::'J/s'"
