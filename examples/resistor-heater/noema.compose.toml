@@ -1,0 +1,31 @@
+schema = "noema.composition/0.2"
+name = "resistor-heater"
+packages = [{ id = "org.noema.joule-heating", release = "0.1.0" }, { id = "org.noema.resistive-operating-point", release = "0.1.0" }, { id = "org.noema.heat-boundary", release = "0.1.0" }]
+mappings = [{ id = "org.noema.joule-to-heat", release = "0.1.0" }]
+[[instances]]
+name = "point"
+usage = "ResistorHeater::point"
+view = { package = "org.noema.resistive-operating-point", name = "resistive-operating-point" }
+[[instances]]
+name = "dissipation"
+usage = "ResistorHeater::dissipation"
+view = { package = "org.noema.joule-heating", name = "joule-heating" }
+[[instances]]
+name = "boundary"
+usage = "ResistorHeater::boundary"
+view = { package = "org.noema.heat-boundary", name = "heat-boundary" }
+[[bindings]]
+id = "current"
+from = { instance = "point", port = "current" }
+to = { instance = "dissipation", port = "current" }
+[[bindings]]
+id = "resistance"
+from = { instance = "point", port = "resistance" }
+to = { instance = "dissipation", port = "resistance" }
+[[bindings]]
+id = "heat"
+from = { instance = "dissipation", port = "power" }
+to = { instance = "boundary", port = "heat" }
+mapping = { package = "org.noema.joule-to-heat", name = "joule-to-heat" }
+assumptions = ["constant-nonnegative-resistance", "steady-current", "all-loss-enters-boundary"]
+allow_losses = ["spatial-distribution"]

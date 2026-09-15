@@ -30,9 +30,41 @@
       "id": "org.noema.assembly",
       "release": "0.2.0",
       "path": "packages/assembly/0.2.0"
+    },
+    {
+      "id": "org.noema.joule-heating",
+      "release": "0.1.0",
+      "path": "packages/joule-heating/0.1.0"
+    },
+    {
+      "id": "org.noema.resistive-operating-point",
+      "release": "0.1.0",
+      "path": "packages/resistive-operating-point/0.1.0"
+    },
+    {
+      "id": "org.noema.heat-boundary",
+      "release": "0.1.0",
+      "path": "packages/heat-boundary/0.1.0"
+    },
+    {
+      "id": "org.noema.joule-to-heat",
+      "release": "0.1.0",
+      "path": "packages/joule-to-heat/0.1.0"
+    },
+    {
+      "id": "org.noema.winding-loss",
+      "release": "0.1.0",
+      "path": "packages/winding-loss/0.1.0"
+    },
+    {
+      "id": "org.noema.resistor-heater",
+      "release": "0.1.0",
+      "path": "packages/resistor-heater/0.1.0"
     }
   ],
   "examples": [
-    "motor-thermal-control"
+    "motor-thermal-control",
+    "winding-loss",
+    "resistor-heater"
   ]
 }

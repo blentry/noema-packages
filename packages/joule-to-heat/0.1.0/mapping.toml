@@ -1,0 +1,18 @@
+schema = "noema.mapping/0.1"
+name = "joule-to-heat"
+from = { package = "org.noema.joule-heating", view = "joule-heating", port = "power" }
+to = { package = "org.noema.heat-boundary", view = "heat-boundary", port = "heat" }
+conversion = { kind = "identity" }
+preserves = ["quantity-value", "cardinality"]
+[[assumptions]]
+id = "constant-nonnegative-resistance"
+description = "Resistance is nonnegative and constant at the selected operating point; temperature dependence is excluded."
+[[assumptions]]
+id = "steady-current"
+description = "Current is steady and transient electrical energy storage is excluded."
+[[assumptions]]
+id = "all-loss-enters-boundary"
+description = "All modeled resistive dissipation enters the selected thermal boundary as heat."
+[[losses]]
+id = "spatial-distribution"
+description = "The boundary retains total heat flow, not its spatial distribution."
